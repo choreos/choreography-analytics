@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<pnml>
+<net id="Net-One" type="P/T net">
+<token id="Default" enabled="true" red="0" green="0" blue="0"/>
+<place id="A">
+<graphics>
+<position x="60.0" y="90.0"/>
+</graphics>
+<name>
+<value>A</value>
+<graphics>
+<offset x="20.0" y="-10.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,100</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="B">
+<graphics>
+<position x="525.0" y="90.0"/>
+</graphics>
+<name>
+<value>B</value>
+<graphics>
+<offset x="17.0" y="-11.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Cerr">
+<graphics>
+<position x="150.0" y="180.0"/>
+</graphics>
+<name>
+<value>Cerr</value>
+<graphics>
+<offset x="-9.0" y="20.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Cf">
+<graphics>
+<position x="345.0" y="90.0"/>
+</graphics>
+<name>
+<value>Cf</value>
+<graphics>
+<offset x="14.0" y="-13.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Cfok">
+<graphics>
+<position x="435.0" y="90.0"/>
+</graphics>
+<name>
+<value>Cfok</value>
+<graphics>
+<offset x="23.0" y="-17.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Ci">
+<graphics>
+<position x="150.0" y="90.0"/>
+</graphics>
+<name>
+<value>Ci</value>
+<graphics>
+<offset x="13.0" y="-17.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Ciok">
+<graphics>
+<position x="240.0" y="90.0"/>
+</graphics>
+<name>
+<value>Ciok</value>
+<graphics>
+<offset x="27.0" y="-20.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Merr">
+<graphics>
+<position x="345.0" y="180.0"/>
+</graphics>
+<name>
+<value>Merr</value>
+<graphics>
+<offset x="-13.0" y="20.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<transition id="Cerr">
+<graphics>
+<position x="150.0" y="135.0"/>
+</graphics>
+<name>
+<value>Cerr</value>
+<graphics>
+<offset x="-10.0" y="20.0"/>
+</graphics>
+</name>
+<orientation>
+<value>90</value>
+</orientation>
+<rate>
+<value>2.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="Tcok">
+<graphics>
+<position x="195.0" y="90.0"/>
+</graphics>
+<name>
+<value>Tcok</value>
+<graphics>
+<offset x="19.0" y="-8.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>98.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="Tlatency">
+<graphics>
+<position x="300.0" y="90.0"/>
+</graphics>
+<name>
+<value>Tlatency</value>
+<graphics>
+<offset x="29.0" y="-14.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>true</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="Tmerr">
+<graphics>
+<position x="345.0" y="135.0"/>
+</graphics>
+<name>
+<value>Tmerr</value>
+<graphics>
+<offset x="-16.0" y="21.0"/>
+</graphics>
+</name>
+<orientation>
+<value>90</value>
+</orientation>
+<rate>
+<value>2.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="Tmok">
+<graphics>
+<position x="390.0" y="90.0"/>
+</graphics>
+<name>
+<value>Tmok</value>
+<graphics>
+<offset x="27.0" y="-11.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>98.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="Treceive">
+<graphics>
+<position x="480.0" y="90.0"/>
+</graphics>
+<name>
+<value>Treceive</value>
+<graphics>
+<offset x="38.0" y="-21.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>0.95</value>
+</rate>
+<timed>
+<value>true</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="Tsend">
+<graphics>
+<position x="105.0" y="90.0"/>
+</graphics>
+<name>
+<value>Tsend</value>
+<graphics>
+<offset x="28.0" y="-13.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<arc id="A to Tsend" source="A" target="Tsend">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="86" y="102" curvePoint="false"/>
+<arcpath id="001" x="111" y="102" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Cerr to Cerr" source="Cerr" target="Cerr">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="161" y="151" curvePoint="false"/>
+<arcpath id="001" x="161" y="177" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Cfok to Treceive" source="Cfok" target="Treceive">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="461" y="102" curvePoint="false"/>
+<arcpath id="001" x="486" y="102" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Cf to Tmerr" source="Cf" target="Tmerr">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="356" y="116" curvePoint="false"/>
+<arcpath id="001" x="356" y="141" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Cf to Tmok" source="Cf" target="Tmok">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="371" y="102" curvePoint="false"/>
+<arcpath id="001" x="396" y="102" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Ciok to Tlatency" source="Ciok" target="Tlatency">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="266" y="102" curvePoint="false"/>
+<arcpath id="001" x="306" y="102" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Ci to Cerr" source="Ci" target="Cerr">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="161" y="116" curvePoint="false"/>
+<arcpath id="001" x="161" y="141" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Ci to Tcok" source="Ci" target="Tcok">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="176" y="102" curvePoint="false"/>
+<arcpath id="001" x="201" y="102" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Tcok to Ciok" source="Tcok" target="Ciok">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="211" y="102" curvePoint="false"/>
+<arcpath id="001" x="237" y="102" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Tlatency to Cf" source="Tlatency" target="Cf">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="316" y="102" curvePoint="false"/>
+<arcpath id="001" x="342" y="102" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Tmerr to Merr" source="Tmerr" target="Merr">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="356" y="151" curvePoint="false"/>
+<arcpath id="001" x="356" y="177" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Tmok to Cfok" source="Tmok" target="Cfok">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="406" y="102" curvePoint="false"/>
+<arcpath id="001" x="432" y="102" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Treceive to B" source="Treceive" target="B">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="496" y="102" curvePoint="false"/>
+<arcpath id="001" x="522" y="102" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Tsend to Ci" source="Tsend" target="Ci">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="121" y="102" curvePoint="false"/>
+<arcpath id="001" x="147" y="102" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+</net>
+</pnml>
